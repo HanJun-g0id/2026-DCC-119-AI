@@ -1,0 +1,48 @@
+# Python
+__pycache__/
+*.py[cod]
+.ipynb_checkpoints/
+
+# Virtual environments
+.venv/
+venv/
+env/
+
+# Local / Colab environment
+/content/
+/content/drive/
+
+# Data files - DO NOT commit competition data
+*.wav
+*.mp3
+*.flac
+*.json
+*.zip
+*.tar
+*.7z
+
+# Generated datasets / caches
+mel_cache/
+cache/
+data/
+datasets/
+dcc119_m1_subset/
+dcc119_generated/
+outputs/
+
+# Model checkpoints
+*.pt
+*.pth
+*.ckpt
+checkpoints/
+
+# OS / editor
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+
+# Secrets
+.env
+*.key
+*.pem
