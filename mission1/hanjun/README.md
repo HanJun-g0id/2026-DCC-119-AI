@@ -30,6 +30,18 @@ Mission 1의 목표는 **음성으로부터 신고자의 성별을 분류**하�
 
 현재 conversation-level 100%는 재현되지 않았으며, 이후 실험에서는 데이터 규모와 모델 구조를 확대해 성능을 비교할 예정이다.
 
+ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ
+**[09/17]**
+현재 진행 상황
+
+1. 서울 구급 Training 데이터의 WAV/JSON 매칭 및 신고자 발화 추출
+2. 16kHz mono 4초 음성 데이터셋 구성
+3. Log-Mel Spectrogram 기반 Small CNN baseline 구축
+4. 2,000/1,000 subset에서 약 74% Accuracy 확인
+5. 10,000/3,000 대규모 subset으로 확장
+6. Best Validation Accuracy 75.60% 확인
+7. Conversation-level 평가 및 Train/Valid conversation overlap 검증
+
 ## 저장소 구성
 
 ```text
@@ -74,13 +86,12 @@ Google Drive
 
 ## 다음 실험
 
-현재 baseline을 기준으로 아래 항목을 순차적으로 비교한다.
+현재 과제
 
-1. 데이터 규모 확대
-2. 입력 길이 비교 (4초 / 6초 / 8초)
-3. Small CNN과 ResNet18 비교
-4. 필요 시 Wav2Vec2 / AST 등 음성 특화 모델 비교
-5. 최종 모델 선정 후 `inference.py` 작성
+- 모델의 M/F별 성능 편차 개선
+- 더 큰/다양한 서울 Training 데이터 적용
+- ResNet18 등 모델과 비교
+- 최종 inference.py 구축
 
 ## 주의
 
